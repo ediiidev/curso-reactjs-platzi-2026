@@ -7,13 +7,23 @@ import { useLocalStorage } from "./useLocalStorage";
   { text: "Aprender React Native", completed: false },
   { text: "Aprender JavaScript", completed: false },
   { text: "Aprender Python", completed: true },
-];*/
+];
+
+// Guardar en localStorage
+localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));
+*/
 
 function App() {
-  const [todos, saveTodos] = useLocalStorage("TODOS_V1", []);
+  const {
+    item: todos,
+    saveItem: saveTodos,
+    loading,
+    error,
+  } = useLocalStorage("TODOS_V1", []);
   const [searchValue, setSearchValue] = React.useState("");
   const completedTodos = todos.filter((todo) => !!todo.completed).length;
   const totalTodos = todos.length;
+
   const searchedTodos = todos.filter((todo) => {
     const todoText = todo.text.toLowerCase();
     const searchText = searchValue.toLowerCase();
@@ -32,8 +42,14 @@ function App() {
     newTodos.splice(todoIndex, 1);
     saveTodos(newTodos);
   };
+  const emptyTodos = () => {
+    console.log("EmptyTodos");
+  };
   return (
     <AppUI
+      loading={loading}
+      error={error}
+      emptyTodos={emptyTodos}
       completedTodos={completedTodos}
       searchValue={searchValue}
       searchedTodos={searchedTodos}
