@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/curso-reactjs-platzi-2026/static/css/main.fdb38624.css",
+    "main.js": "/curso-reactjs-platzi-2026/static/js/main.f088b655.js",
+    "index.html": "/curso-reactjs-platzi-2026/index.html",
+    "static/media/delete.svg": "/curso-reactjs-platzi-2026/static/media/delete.7018c4465589031bd51c8efbe21df9ca.svg",
+    "static/media/check.svg": "/curso-reactjs-platzi-2026/static/media/check.e9a948bba52a34123d2ed7aeda0ea495.svg",
+    "main.fdb38624.css.map": "/curso-reactjs-platzi-2026/static/css/main.fdb38624.css.map",
+    "main.f088b655.js.map": "/curso-reactjs-platzi-2026/static/js/main.f088b655.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fdb38624.css",
+    "static/js/main.f088b655.js"
+  ]
+}
