@@ -18,7 +18,6 @@ function AppUI() {
     searchedTodos,
     completeTodo,
     deleteTodo,
-    emptyTodos,
     openModal,
     setOpenModal,
   } = React.useContext(TodoContext);
@@ -35,8 +34,7 @@ function AppUI() {
           </>
         )}
         {error && <TodosError />}
-        {emptyTodos && <EmptyTodos />}
-        {!loading && searchedTodos.length === 0 && <p>Hubo un error</p>}
+        {!loading && searchedTodos.length === 0 && <EmptyTodos />}
         {searchedTodos.map((todo) => (
           <TodoItem
             key={todo.text}

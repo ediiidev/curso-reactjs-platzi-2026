@@ -1,0 +1,28 @@
+.EmptyTodos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 48px;
+  padding: 20px;
+}
+
+.EmptyTodos-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1e1e2f;
+  margin-bottom: 12px;
+}
+
+.EmptyTodos-instructions {
+  font-size: 16px;
+  color: #616173;
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+.plus-accent {
+  color: #00a8ff;
+  font-size: 18px;
+}

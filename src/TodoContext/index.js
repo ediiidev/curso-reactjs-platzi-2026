@@ -14,7 +14,6 @@ function TodoProvider({ children }) {
   const [openModal, setOpenModal] = React.useState(false);
   const completedTodos = todos.filter((todo) => !!todo.completed).length;
   const totalTodos = todos.length;
-
   const searchedTodos = todos.filter((todo) => {
     const todoText = todo.text.toLowerCase();
     const searchText = searchValue.toLowerCase();
@@ -33,9 +32,6 @@ function TodoProvider({ children }) {
     newTodos.splice(todoIndex, 1);
     saveTodos(newTodos);
   };
-  const emptyTodos = () => {
-    console.log("EmptyTodos");
-  };
 
   const addTodo = (text) => {
     const newTodos = [...todos];
@@ -51,7 +47,6 @@ function TodoProvider({ children }) {
       value={{
         loading,
         error,
-        emptyTodos,
         completedTodos,
         searchValue,
         searchedTodos,

@@ -10,7 +10,9 @@ function TodoCounter() {
   const { completedTodos, totalTodos } = React.useContext(TodoContext);
   return (
     <h1 className="TodoCounter">
-      {completedTodos !== totalTodos ? (
+      {totalTodos === 0 ? (
+        <span>Sin tareas pendientes</span>
+      ) : completedTodos !== totalTodos ? (
         <span>
           Has completado{" "}
           <strong style={{ fontWeight: "bold" }}>{completedTodos}</strong> de{" "}
